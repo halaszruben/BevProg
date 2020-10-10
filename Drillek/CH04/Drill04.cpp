@@ -73,26 +73,28 @@ int main()
 			cout << szam << mertekegyseg << "\n";
 			v.push_back(szam);
 		}
-		if(mertekegyseg == "cm")
+		else if(mertekegyseg == "cm")
 		{
 			cout << szam << mertekegyseg << " = " << szam/100 << "m\n";
 			szam = szam/100;
 			v.push_back(szam);
 
 		}
-		if(mertekegyseg == "in") 
+		else if(mertekegyseg == "in") 
 		{
 			cout << szam << mertekegyseg << " = " << szam*0.0254 << "m\n";
 			szam= szam*0.0254;
 			v.push_back(szam);
 		}
-		if(mertekegyseg == "ft")
+		else if(mertekegyseg == "ft")
 		{
 			cout << szam << mertekegyseg << " = " << szam*0.3048 << "m\n";
 			szam = szam*0.3048;
 			//v.push_back(szam*0.3048);
 			v.push_back(szam);
 		}
+		else
+			error("You have given a wrong unit!");
 
 		k++;
 		sum += szam;

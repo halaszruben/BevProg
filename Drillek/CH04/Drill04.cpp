@@ -10,6 +10,9 @@ int main()
 	double sum=0;
 	int k=0;
 	vector <double> v;
+	constexpr double inben = 0.0254;
+	constexpr double cmben = 100;
+	constexpr double ftben = 0.3048;
 
 	// 1-tol 5-ig
 	/*while(cin >> elso >> masodik)
@@ -75,21 +78,21 @@ int main()
 		}
 		else if(mertekegyseg == "cm")
 		{
-			cout << szam << mertekegyseg << " = " << szam/100 << "m\n";
-			szam = szam/100;
+			cout << szam << mertekegyseg << " = " << szam/cmben << "m\n";
+			szam = szam/cmben;
 			v.push_back(szam);
 
 		}
 		else if(mertekegyseg == "in") 
 		{
-			cout << szam << mertekegyseg << " = " << szam*0.0254 << "m\n";
-			szam= szam*0.0254;
+			cout << szam << mertekegyseg << " = " << szam*inben << "m\n";
+			szam= szam*inben;
 			v.push_back(szam);
 		}
 		else if(mertekegyseg == "ft")
 		{
-			cout << szam << mertekegyseg << " = " << szam*0.3048 << "m\n";
-			szam = szam*0.3048;
+			cout << szam << mertekegyseg << " = " << szam*ftben << "m\n";
+			szam = szam*ftben;
 			//v.push_back(szam*0.3048);
 			v.push_back(szam);
 		}
